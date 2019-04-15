@@ -1,0 +1,41 @@
+﻿<Window x:Class="AirportBoard.AirportBoard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AirportBoard"
+        xmlns:local1="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        mc:Ignorable="d"
+        Title="Аэропорт" Height="350" Width="550" MinWidth="550" MinHeight="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Name="CurrentTimeLabel" Content="Текущее время: 00.00.0000 00:00" Margin="40,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="Последний рейс:" HorizontalAlignment="Left" Margin="40,43,0,0" VerticalAlignment="Top"/>
+        <Label Name="LastFlight" Content="" HorizontalAlignment="Left" Margin="68,69,0,0" VerticalAlignment="Top"/>
+        <Label Content="Скорость:" Margin="269,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="65"/>
+        <TextBox Name ="SpeedTextBox" Margin="334,14,0,0" TextWrapping="Wrap" Text="10000" VerticalAlignment="Top" TextChanged="SpeedTextBox_TextChanged" HorizontalAlignment="Left" Width="41"/>
+        <GroupBox Name="Arrivals" Header="Прилет" Height="126" Margin="40,159,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200">
+            <Grid Margin="0,0,-2,1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Name="ArrLastFlightPassengers" Content="LastFlightPassengers" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+                <Label Name="ArrLastDayPassengers" Content="LastDayPassengers" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+                <Label Name="ArrTotalPassengers" Content="TotalPassengers" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Name="Departures" Header="Вылет" Height="126" Margin="292,159,0,0" VerticalAlignment="Top" Width="200" HorizontalAlignment="Left">
+            <Grid Margin="0,0,-2,1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="DepLastFlightPassengers" Content="LastFlightPassengers" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Height="26"/>
+                <Label x:Name="DepLastDayPassengers" Content="LastDayPassengers" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="26"/>
+                <Label x:Name="DepTotalPassengers" Content="TotalPassengers" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
